@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung_dung_chuyen_doi_tien_te</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>
+                <label for="Amount">Amount </label>
+            </th>
+            <th>
+                From Currency
+            </th>
+            <th>
+                To Currency
+            </th>
+            <th>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input style="width: 100px" type="text" id="Amount">
+            </td>
+            <td>
+                <select style="width: 150px">
+                    <option id="From" value="VND">VND</option>
+                    <option id="From" value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select style="width: 150px">
+                    <option id="To" value="USD">USD</option>
+                    <option id="To" value="VND">VND</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="ChangeMoney()" style="color: plum">
+                    Convert
+                </button>
+            </td>
+        </tr>
+    </table>
+
+<br>
+<p id="Result"></p>
+</body>
+</html>
+<script src="tiente.js"></script>
