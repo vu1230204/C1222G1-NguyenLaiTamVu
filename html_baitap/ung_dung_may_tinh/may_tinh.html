@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ung_dung_may_tinh</title>
+</head>
+<body>
+<h1>CACULATOR</h1>
+<table>
+    <tr>
+        <td>
+            <input id="X" type="text">
+        </td>
+        <td>
+            <input id="Y" type="text">
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+            <button onclick="Cong()">  Addition </button>
+        </td>
+        <td>
+            <button onclick="Tru()"> Subtraction </button>
+        </td>
+        <td>
+            <button onclick="Nhan()"> Multiplication </button>
+        </td>
+        <td>
+            <button onclick="Chia()"> Division </button>
+        </td>
+    </tr>
+</table>
+<h3>Result:</h3>
+<p id="Result" ></p>
+</body>
+</html>
+<script>
+    function Cong() {
+        let a= +document.getElementById("X").value;
+        let b= +document.getElementById("Y").value;
+        let Result = a + b;
+        document.getElementById("Result").innerHTML = Result;
+    }
+    function Tru() {
+        let a= +document.getElementById("X").value;
+        let b= +document.getElementById("Y").value;
+        let Result = a - b;
+        document.getElementById("Result").innerHTML = Result;
+    }
+    function Nhan() {
+        let a= +document.getElementById("X").value;
+        let b= +document.getElementById("Y").value;
+        let Result = a * b;
+        document.getElementById("Result").innerHTML = Result;
+    }
+    function Chia() {
+        let a= +document.getElementById("X").value;
+        let b= +document.getElementById("Y").value;
+        let Result = a / b;
+        document.getElementById("Result").innerHTML = Result;
+    }
+</script>
