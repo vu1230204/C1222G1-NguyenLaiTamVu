@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng</title>
+</head>
+<body>
+<script>
+    let input1 = +prompt("weight", "")
+        input2 = +prompt("height", "")
+    let bmi = input1 / Math.pow(input2, 2)
+    if (bmi < 18)
+        document.write("Underweight");
+    else if (bmi < 30.0)
+        document.write("Overweight");
+    else
+        document.write("Obese");
+</script>
+</body>
+</html>
