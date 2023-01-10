@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài6</title>
+</head>
+<body>
+<script>
+    let t = +prompt("nhập vào a")
+    u = +prompt("nhập vào b")
+    n = -(u / t)
+    if (t == 0 && u != 0) {
+        alert("phương trình vô nghiệm")
+    } else if (t == 0 && u == 0) {
+        alert("phương trình vô số nghiệm")
+    } else if (t != 0 && u == 0) {
+        alert("phương trình có nghiệm = 0 ")
+    } else {
+        alert("phương trình có nghiệm duy nhất =" + n)
+    }
+
+
+</script>
+</body>
+</html>

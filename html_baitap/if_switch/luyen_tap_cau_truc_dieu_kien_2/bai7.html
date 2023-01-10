@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài7</title>
+</head>
+<body>
+<script>
+    let a1 = +prompt("nhập vào a")
+    b1 = +prompt("nhập vào số b")
+    c1 = +prompt("nhập vào số c")
+    delta = (Math.pow(b1, 2)) - (4 * a1 * c1);
+    x1 = x2 = -b1 / 2 * a1;
+    x3 = (-b1 + (Math.sqrt(delta))) / (2 * a1);
+    x4 = (-b1 - (Math.sqrt(delta))) / (2 * a1);
+
+    if (delta < 0) {
+        alert("Phương trình vô nghiệm");
+    }
+    if (delta == 0) {
+        alert("Phương trình có nghiệm kép =" + x1);
+    }
+    if (delta > 0) {
+        alert("Phương trình có 2 nghiệm phân biệt" + x3 + " " + x4);
+    }
+
+</script>
+</body>
+</html>
