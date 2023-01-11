@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bai1.3</title>
+    <title>bai1.5</title>
 </head>
 <body>
 <script>
@@ -10,6 +10,7 @@
     let secondNum = 1;
     let thirdNum = 2;
     let fibonacci = [firstNum, secondNum, thirdNum];
+    let sum = 0;
 
     for (let i = 1; i <= 17; i++) {
         firstNum = secondNum;
@@ -17,7 +18,13 @@
         thirdNum = firstNum + thirdNum;
         fibonacci.push(thirdNum);
     }
-    document.write(fibonacci);
+
+    fibonacci.forEach((item) => {
+        sum += item;
+    });
+    document.write(sum);
+
 </script>
+
 </body>
 </html>
