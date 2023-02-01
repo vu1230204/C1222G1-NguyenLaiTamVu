@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="number(n1,n2)">
+<script>
+    let n1 = +prompt("nhập vào tham số n1");
+    n2 = +prompt("nhập vào tham số n2");
+
+    function number(n1, n2) {
+        if (n1 > n2) {
+            return alert("n1 lớn hơn n2");
+        }
+        if (n1 <= n2) {
+            return alert(" tổng của hai số : " + (n1 + n2));
+        }
+    }
+</script>
+</body>
+</html>
