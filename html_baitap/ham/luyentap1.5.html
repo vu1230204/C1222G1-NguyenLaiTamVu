@@ -6,7 +6,14 @@
 </head>
 <body>
 <script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let arr2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let input = prompt("nhập vào sao để tìm sao tương ứng:");
 
+    function starSearching(star) {
+        if (arr1.includes(star)) return alert(arr2[arr1.indexOf(star)]);
+        else return alert("không có ngôi sao nào ứng với ngôi sao bạn tìm");
+    }
 </script>
 </body>
 </html>
