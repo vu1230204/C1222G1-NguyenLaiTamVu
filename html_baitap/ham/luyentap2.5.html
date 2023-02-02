@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập số thứ nhất")
+    let b = +prompt("nhập số thứ hai")
+    let c = +prompt("nhập số thứ ba")
+
+    function min() {
+        min = a;
+        if (b < a && a < c) {
+            return min = b;
+        } else if (c < b && c < a) {
+            return min = c;
+        } else {
+            return min = a;
+        }
+    }
+
+    document.write(min());
+
+</script>
+</body>
+</html>
