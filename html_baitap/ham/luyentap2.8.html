@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body onload="reverse([])">
 <script>
-    let arr = [1, 2, 4, 5, 5, 1, 1, 2, 4, 1, 2];
+    let input;
 
-    function reverse1(arr) {
-        return arr.reverse();
+    function reverse(arr) {
+        for (let i = 0; i < 5; i++) {
+            input = +prompt("Enter 5 numbers to do the reversion:");
+            arr[i] = input;
+        }
+        alert(arr.reverse());
     }
-
-    alert(reverse1(arr));
-
 </script>
 </body>
 </html>
