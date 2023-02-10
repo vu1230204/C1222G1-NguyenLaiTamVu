@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numerators = [1, 3, 5, 4, 12];
+    let denominators = [4, 4, 5, 5, 1];
+    let fraction = [];
+    var maxFraction;
+    for (let i = 0; i < numerators.length; i++) {
+        maxFraction = numerators[i] / denominators[i];
+        fraction.push(maxFraction);
+    }
+    let max = Math.max(...fraction);
+    let index = fraction.indexOf(max);
+    document.write(index);
+</script>
+</body>
+</html>

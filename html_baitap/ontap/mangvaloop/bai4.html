@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> menu</h1>
+<p>
+    1. cafe  <br>
+    2. cam vắt <br>
+    3. nước ép cà rốt <br>
+    4. nước ép cà chua <br>
+    5. nước lọc <br>
+    6. nước dừa <br>
+    7. thoát order <br>
+</p>
+<input  type="number" id="a"> Nhap mon muon chon
+<input type="number" id="b"> Nhap so luong
+<button type="button" onclick="check()">order</button>
+<input type="text" id="c">
+
+<script>
+    function check() {
+        let a = +document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        let menu = ["cafe", "cam vắt", "nước ép cà rốt", "nước ép cà chua", "nước lọc", "nước dừa"];
+        let order = [1, 2, 3, 4, 5, 6, 7];
+        let price = [30, 40, 40, 40, 10, 20];
+        for (let i = 0; i < menu.length; i++) {
+            if (a === order[i]) {
+                document.getElementById('c').value = price[i] * b;
+            } else if (a === order[6]) {
+                break;
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>
