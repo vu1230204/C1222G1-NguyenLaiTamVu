@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dadAge;
+    let sonAge;
+    do {
+        dadAge = +prompt("nhập số tuổi của cha");
+        sonAge = +prompt("nhập số tuổi của con");
+    } while ((sonAge + 25) >= dadAge);
+    for (let i = 1; ; i++) {
+        sonAge += 1;
+        dadAge += 1;
+        if (sonAge + sonAge === dadAge) {
+            document.write("tuổi cha gấp đôi tuổi con sau :" + " " + i + " " + "năm nữa")
+            break;
+        }
+    }
+</script>
+</body>
+</html>

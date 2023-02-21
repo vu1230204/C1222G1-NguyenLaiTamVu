@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let prime;
+    do {
+        prime = +prompt("Nhập vào số nguyên để kiểm tra")
+    } while (!isPrime(prime))
+
+    function isPrime(num) {
+        if (num === 0 || num === 1) {
+            return false;
+        }
+        if (num === 2) return true;
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+   alert("đây là số nguyên tố" + isPrime(prime))
+
+</script>
+</body>
+</html>
