@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài của mảng");
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        let input = +prompt("nhập phần tử của mảng")
+        array[i] = input;
+    }
+    document.write(array);
+
+    function checkArray(a) {
+        let sum = 0;
+        let newArray = [];
+        for (let i = 0; i < array.length - 1; i++) {
+            sum = array[i + 1] - array[i];
+            newArray.push(sum);
+        }
+        for (let j = 0; j < newArray.length; j++) {
+            let check = newArray[0];
+            if (check === newArray[j]) {
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            return 'OK';
+        } else {
+            return 'NO';
+        }
+    }
+
+    alert(checkArray(array));
+
+</script>
+</body>
+</html>

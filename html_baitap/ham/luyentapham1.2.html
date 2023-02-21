@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n = +prompt("nhập độ dài của mảng")
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        let input = +(prompt("nhập các phần tủ của mảng"))
+        arr [i] = input;
+    }
+    let count = 0;
+
+    function array(c) {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] + arr[i] === 2 * arr[i]) { // kiểm tra kiểu number và string
+                count++;
+            }
+        }
+        if (count === arr.length) {
+            return '1';
+        } else if (count === 0) {
+            return '0';
+        } else if (count > 0 && count < arr.length) {
+            return '-1';
+        }
+
+    }
+
+    alert(array(arr));
+</script>
 </body>
 </html>
