@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào số dòng của mảng");
+    let m = +prompt("nhập vào số cột của mảng");
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array[i] = [];
+    }
+    for (let i = 0; i < m; i++) {
+        for (let j = 0; j < n; j++) {
+            array[i][j] = +prompt("Nhập các phần tử của mảng : ");
+        }
+
+    }
+    document.write("mảng sau khi nhập là:" + array);
+    let sum;
+    let sum1 = 0;
+    let sum2 = 0;
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array[i].length; j++) {
+            if (i === j) {
+                sum1 += array[i][j];
+            }
+            if (i + j === array.length - 1) {
+                sum2 += array[i][j];
+            }
+        }
+    }
+    sum = sum1 + sum2;
+    document.write("Tổng các phần tử 2 đường chéo của mảng" + sum);
+</script>
+</body>
+</html>

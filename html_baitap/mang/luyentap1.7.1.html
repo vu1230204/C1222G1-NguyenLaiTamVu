@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = new Array(10);
+    let input;
+    for (let i = 0; i < array.length; i++) {
+        input = +prompt("nhập vào các số nguyên trong mảng");
+        array[i] = input;
+    }
+    let V = +prompt("nhập vào số nguyên V");
+    if (array.includes(V)) {
+        let index = array.indexOf(V);
+        array.splice(index, 1);
+        alert(V + " đã bị xóa khỏi mảng");
+        array.push(0);
+    } else alert(V + "không có trong mảng");
+    document.write(array);
+</script>
+</body>
+</html>

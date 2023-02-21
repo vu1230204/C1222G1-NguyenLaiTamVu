@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào độ dài mảng");
+    let array = new Array(n);
+    let input;
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        input = +prompt("nhập vào các số nguyên trong mảng");
+        array[i] = input;
+    }
+    for (let j = 0; j < array.length; j++) {
+        if (j % 2 === 1 && array[j] % 2 === 0) {
+            sum += array[j];
+        }
+    }
+
+
+    document.write(sum)
+</script>
+</body>
+</html>
