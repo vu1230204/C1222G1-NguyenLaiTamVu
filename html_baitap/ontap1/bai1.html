@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhâp vào độ dài mảng");
+    let a = Array(n);
+    let c;
+    let count = 0;
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập vào các phần tử mảng")
+        a[i] = c
+    }
+    document.write(a + "<br>");
+    for (let j = 0; j < n; j++) {
+        if (a [j] % 2 === 0 && j % 2 === 1) {
+            count += a[j];
+        }
+    }
+
+    document.write(count);
+
+</script>
+</body>
+</html>

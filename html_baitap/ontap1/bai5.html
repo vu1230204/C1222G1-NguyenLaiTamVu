@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số lượng phần tử của mảng")
+    let a = Array(n);
+    let b = [];
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập phần tử trong mảng");
+        a[i] = c;
+    }
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= i; j++) {
+            if (a[j] !== a[i]) {
+                b.push(a[j]);
+            }
+        }
+    }
+    document.write(b)
+
+
+</script>
+</body>
+</html>

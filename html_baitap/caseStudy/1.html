@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let b = prompt("Nhập ký tự cần kiểm tra");
+    // let a = ["a", "u", "i", "a", "e", "O", "U", "I", "A", "E"];
+    // let flag;
+    //
+    // for (let i = 0; i < a.length; i++) {
+    //     if (b === a[i]) {
+    //         flag = true;
+    //     } else {
+    //         flag = false;
+    //     }
+    // }
+    // if (flag === true) {
+    //     document.write("là nguyên âm");
+    // } else {
+    //     document.write("là phụ âm");
+    // }
+    let a = prompt('nhap ky tu');
+    let arraya = ['u', 'o', 'i', 'a', 'e'];
+    let arrayb = ['U', 'O', 'I', 'A', 'E'];
+    let flag = true;
+    for (let i = 0; i < arraya.length; i++) {
+        if (a === arraya[i] || a === arrayb[i]) {
+            flag = true
+        } else {
+            flag = false;
+        }
+    }
+    if (flag === true) {
+        document.writeln("la nguyen am")
+    } else {
+        document.writeln("la phu am ")
+    }
+
+</script>
+</body>
+</html>

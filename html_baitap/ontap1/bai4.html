@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhâp vào độ dài mảng");
+    let a = Array(n);
+    let c;
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập vào các phần tử mảng")
+        a[i] = c
+    }
+    document.write(a + "<br>");
+    let flag = true;
+    for (let j = 0; j < n; j++) {
+        if (a[j] === a[a.length - 1 - j]) {
+            flag = true;
+        } else {
+            flag = false;
+            break;
+        }
+    }
+    if (flag) {
+        document.write("OK");
+    } else document.write("NO");
+</script>
+</body>
+</html>

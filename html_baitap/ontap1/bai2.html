@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài mảng");
+    let a = Array(n);
+    let c;
+    let d = [];
+    let e = [];
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập vào phần tử của mảng");
+        a[i] = c;
+    }
+
+    for (let j = 0; j < n; j++) {
+        if (a[j] % 2 === 0) {
+            d.push(a[j]);
+        } else if (a[j] % 2 === 1) {
+            e.push(a[j]);
+        }
+    }
+    document.write(a);
+    if (e.length === d.length) {
+        document.write("OK")
+    } else document.write("NO");
+</script>
+</body>
+</html>
