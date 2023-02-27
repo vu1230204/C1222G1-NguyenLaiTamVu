@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số lượng phần tử mảng a");
+    let a = Array(n);
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập phần tử mảng a");
+        a[i] = c;
+    }
+
+
+    let m = +prompt("nhập số lượng phần tử mảng b");
+    let b = Array(m);
+    for (let i = 0; i < m; i++) {
+        d = +prompt("nhập phần tử mảng b");
+        b[i] = d;
+    }
+
+
+    let missingValue = [];
+    for (let i = 0; i < b.length; i++) {
+        let count = 0;
+        for (j = 0; j < a.length; j++) {
+            if (a[j] === b[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            missingValue.push(b[i])
+        }
+    }
+
+    document.write(missingValue)
+</script>
+</body>
+</html>

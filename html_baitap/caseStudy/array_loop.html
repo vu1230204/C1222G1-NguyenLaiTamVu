@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập vào số lượng phần tử mảng");
+    let a = Array(n);
+    let c;
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập vào phần tử mảng");
+        a[i] = c;
+    }
+    document.write(a + "<br>")
+    let b = [];
+    let x = 0;
+    for (let i = 0; i < a.length; i++) {
+        x += a[i];
+        b[i] = x;
+    }
+    document.write(b)
+</script>
+</body>
+</html>
