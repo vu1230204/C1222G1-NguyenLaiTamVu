@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập vào độ dài của mảng lớn");
+    let arr = new Array(n);
+    for (let i = 0; i < arr.length; i++) {
+        let m = +prompt("Nhập vào đồ dài của mảng thứ " + (i + 1));
+        let arr1 = [];
+        for (let j = 0; j < m; j++) {
+            arr1[j] = +prompt("Nhập vào giá trị thứ " + (i + 1));
+            arr[i] = arr1;
+        }
+    }
+    console.log(arr);
+
+    function findMax(x) {
+        let max = x[0][0];
+        for (let i = 0; i < x.length; i++) {
+            for (let j = 0; j < x[i].length; j++) {
+                if (x[i][j] > max) {
+                    max = x[i][j];
+                }
+            }
+        }
+        return max;
+    }
+
+    function findMin(x) {
+        let min = x[0][0];
+        for (let i = 0; i < x.length; i++) {
+            for (let j = 0; j < x[i].length; j++) {
+                if (x[i][j] < min) {
+                    min = x[i][j];
+                }
+            }
+        }
+        return min;
+    }
+
+    document.writeln('Phần tử lớn nhất trong mảng : ' + findMax(arr) + ' <br>');
+    document.writeln('Phần tử nhỏ nhất trong mảng : ' + findMin(arr) + ' <br>');
+</script>
+</body>
+</html>

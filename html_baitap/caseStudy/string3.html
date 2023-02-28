@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let n = prompt("Nhập vào chuỗi cần kiểm tra ");
 
+    function checkString(string) {
+        let array = string.split("");
+        let array1 = Array();
+        document.writeln(array + '<br>');
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 1; j < array.length; j++) {
+                if (array[i] === array[j] && i !== j) {
+                    array1.push(array[i]);
+                    array.splice(j, 1);
+                }
+            }
+        }
+        document.writeln(" Các kí tự khác nhau : " + array1 + '<br>');
+
+    }
+
+    checkString(n);
+</script>
 </body>
 </html>
