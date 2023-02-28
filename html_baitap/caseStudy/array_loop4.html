@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h> Menu đồ uống</h>
+<table border="1">
+    <tr>
+        <th>
+            <button onclick="orderCafe()">1</button>
+        </th>
+        <th>
+            <button onclick="orderNuoccam()">2</button>
+        </th>
+        <th>
+            <button onclick="orderCarot()">3</button>
+        </th>
+        <th>
+            <button onclick="orderCachua()">4</button>
+        </th>
+        <th>
+            <button onclick="orderNuocloc()">5</button>
+        </th>
+        <th>
+            <button onclick="orderNuocdua()">6</button>
+        </th>
+        <th>
+            <button onclick="endOrder()">7</button>
+        </th>
+    </tr>
+    <tr>
+        <td>Cafe</td>
+        <td>Cam Vắt</td>
+        <td>Nước ép cà rốt</td>
+        <td>Nước ép cà chua</td>
+        <td>Nước lọc</td>
+        <td>Nước dừa</td>
+        <td>Thoát gọi món</td>
+    </tr>
+</table>
+<p id="bill">
+</p>
+<p id="total"></p>
+<script>
+    let bill = "";
+    let totalOrder = 0;
+
+    function orderCafe() {
+        let costCafe = 15000;
+        alert("giá của cafe là :" + costCafe)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costCafe
+        totalOrder += total
+        bill += "Cafe" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+    function orderNuoccam() {
+        let costNuoccam = 30000;
+        alert("giá của nước cam là :" + costNuoccam)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costNuoccam
+        totalOrder += total
+        bill += "Nước Cam" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+    function orderCarot() {
+        let costCarot = 30000;
+        alert("giá của cà rốt là :" + costCarot)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costCarot
+        totalOrder += total
+        bill += "Nước ép cà rốt" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+    function orderCachua() {
+        let costCachua = 30000;
+        alert("giá của cà chua là :" + costCachua)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costCachua
+        totalOrder += total
+        bill += "Nước ép cà chua" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+    function orderNuocloc() {
+        let costNuocloc = 10000;
+        alert("giá của nước lọc là :" + costNuocloc)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costNuocloc
+        totalOrder += total
+        bill += "Nước lọc" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+    function orderNuocdua() {
+        let costNuocdua = 45000;
+        alert("giá của nước dừa là :" + costNuocdua)
+        let a = +prompt("nhập số lượng bạn muốn order")
+        let total = a * costNuocdua
+        totalOrder += total
+        bill += "Nước dừa" + " " + a + " " + "ly" + " " + total + "<br>"
+        document.getElementById("bill").innerHTML = bill;
+        document.getElementById("total").innerHTML = "tổng số tiền" + " " + totalOrder;
+    }
+
+
+    function endOrder() {
+        alert("kết thúc order");
+        document.getElementById("total").innerHTML = ("tổng số tiền bạn phải trả cho hóa đơn là" + " " + totalOrder);
+    }
+</script>
+</body>
+</html>

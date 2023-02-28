@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số tử số ")
+    let numerators = Array(n)
+    for (let i = 0; i < n; i++) {
+        c = +prompt("nhập các tử số");
+        numerators[i] = c;
+    }
+    let m = +prompt("nhập số mẫu số")
+    let denomirators = Array(m)
+    for (let i = 0; i < m; i++) {
+        d = +prompt("nhập các mẫu số");
+        denomirators[i] = d;
+    }
+
+    document.write(numerators + "<br>" + denomirators + "<br>")
+    let maxFraction = [];
+
+    for (let j = 0; j < m; j++) {
+        let fraction = numerators[j] / denomirators[j]
+        maxFraction.push(fraction);
+    }
+    let max = Math.max(...maxFraction);
+    let index = maxFraction.indexOf(max);
+    document.write("vị trí của phân số lớn nhất" + " " + index)
+
+
+</script>
+</body>
+</html>
